@@ -1,2 +1,2 @@
 # Flappy-Bird-with-AI
-Hack old faithfull Flappy Bird with good famous Neuroevolution
+Hack old faithful Flappy Bird with Neural Network and Genetic Algorithm
