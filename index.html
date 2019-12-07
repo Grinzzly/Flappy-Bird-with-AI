@@ -3,9 +3,29 @@
   <head>
     <title>Flappy Bird</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/devices.min.css" type="text/css">
   </head>
   <body>
-    <canvas id="flappy" width="500" height="512"></canvas>
+    <div class="marvel-device iphone-x">
+      <div class="notch">
+        <div class="camera"></div>
+        <div class="speaker"></div>
+      </div>
+      <div class="top-bar"></div>
+      <div class="sleep"></div>
+      <div class="bottom-bar"></div>
+      <div class="volume"></div>
+      <div class="overflow">
+        <div class="shadow shadow--tr"></div>
+        <div class="shadow shadow--tl"></div>
+        <div class="shadow shadow--br"></div>
+        <div class="shadow shadow--bl"></div>
+      </div>
+      <div class="inner-shadow"></div>
+      <div class="screen">
+        <canvas id="flappy" width="400" height="512"></canvas>
+      </div>
+    </div>
     <br />
     <button onclick="speed(60)">x1</button>
     <button onclick="speed(120)">x2</button>
