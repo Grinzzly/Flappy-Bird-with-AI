@@ -305,8 +305,8 @@ class Game {
 
     this.ctx.fillText(`Score: ${this.score}`, 10, 65);
     this.ctx.fillText(`Record: ${this.maxScore}`, 10, 90);
-    this.ctx.fillText(`Generation: ${this.generation}`, 246, 65);
-    this.ctx.fillText(`Alive: ${this.alives} / ${Brain.options.population}`, 246, 90);
+    this.ctx.fillText(`Generation: ${this.generation}`, 242, 65);
+    this.ctx.fillText(`Alive: ${this.alives} / ${Brain.options.population}`, 242, 90);
 
     requestAnimationFrame(() => {
       this.display();
@@ -320,8 +320,8 @@ window.onload = function(){
   const sprites = {
     bird: './img/bird.png',
     background: './img/background.png',
-    pipeTop: './img/pipetop.png',
-    pipeBottom: './img/pipebottom.png'
+    pipeTop: './img/pipe-top.png',
+    pipeBottom: './img/pipe-bottom.png'
   };
 
   const start = function(){
