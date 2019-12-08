@@ -1,0 +1,102 @@
+body {
+  text-align: center;
+}
+
+.upper-background {
+  z-index: -1;
+  height: 5%;
+  background: #84C3CF;
+}
+
+.lower-background {
+  z-index: -1;
+  margin-top: -5px;
+  height: 40%;
+  background: #DFD996;
+}
+
+.button-block-header {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.button-block {
+  height: 220px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-block-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pixel-button {
+  position: relative;
+  width: 140px;
+  height: 70px;
+  color: white;
+  font-size: 21px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  background-color: #06C1DE;
+  border: none;
+  border-radius: 24px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  outline: none;
+}
+
+.pixel-button::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 70px;
+  top: 12px;
+  left: 0;
+  background-color: #047E91;
+  border-radius: 24px;
+  z-index: -1;
+}
+
+.pixel-button:hover {
+  background-color: #06B6D1;
+}
+
+.pixel-button:active {
+  top: 10px;
+}
+
+.pixel-button:active::after {
+  top: 2px;
+}
+
+.sign {
+  display: block;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  font-weight: 700;
+  color: #5d93ff;
+  text-transform: uppercase;
+  text-decoration: none;
+  /*position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;*/
+}
+
+.written-by {
+  color: #f7a046;
+}
+
+.repo-link {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 35px;
+}

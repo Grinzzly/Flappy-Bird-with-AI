@@ -225,11 +225,13 @@ class Game {
     this.interval++;
 
     if(this.interval === this.spawnInterval){
+      this.score++;
+      this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
+
       this.interval = 0;
     }
 
-    this.score++;
-    this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
+
 
     if(FPS === 0){
       setZeroTimeout(() => {
@@ -301,10 +303,10 @@ class Game {
     this.ctx.fillStyle = 'white';
     this.ctx.font='24px Oswald, sans-serif';
 
-    this.ctx.fillText(`Score: ${this.score}`, 10, 25);
-    this.ctx.fillText(`Record : ${this.maxScore}`, 10, 50);
-    this.ctx.fillText(`Generation : ${this.generation}`, 10, 75);
-    this.ctx.fillText(`Alive : ${this.alives} / ${Brain.options.population}`, 10, 100);
+    this.ctx.fillText(`Score: ${this.score}`, 10, 65);
+    this.ctx.fillText(`Record: ${this.maxScore}`, 10, 90);
+    this.ctx.fillText(`Generation: ${this.generation}`, 246, 65);
+    this.ctx.fillText(`Alive: ${this.alives} / ${Brain.options.population}`, 246, 90);
 
     requestAnimationFrame(() => {
       this.display();

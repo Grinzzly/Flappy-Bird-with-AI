@@ -3,7 +3,9 @@
   <head>
     <title>Flappy Bird</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/devices.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/game.css" type="text/css">
   </head>
   <body>
     <div class="marvel-device iphone-x">
@@ -23,15 +25,30 @@
       </div>
       <div class="inner-shadow"></div>
       <div class="screen">
+        <!--<div class="upper-background"></div>-->
         <canvas id="flappy" width="400" height="512"></canvas>
+        <div class="lower-background">
+          <img src="./img/line-divider.png" alt="line"/>
+          <span class="button-block-header">Set Speed:</span>
+          <div class="button-block">
+            <div class="button-block-row">
+              <button class="pixel-button" onclick="speed(60)">x1</button>
+              <button class="pixel-button" onclick="speed(180)">x3</button>
+            </div>
+            <div class="button-block-row">
+              <button class="pixel-button" onclick="speed(300)">x5</button>
+              <button class="pixel-button" onclick="speed(0)">x100</button>
+            </div>
+          </div>
+          <!--<a class="repo-link" href="https://github.com/Grinzzly" target="_blank">Check the source</a>-->
+
+        </div>
       </div>
     </div>
-    <br />
-    <button onclick="speed(60)">x1</button>
-    <button onclick="speed(120)">x2</button>
-    <button onclick="speed(180)">x3</button>
-    <button onclick="speed(300)">x5</button>
-    <button onclick="speed(0)">x100</button>
+    <a class="sign" href="https://simplexco.de/" target="_blank">
+      <span class="written-by">written by </span>
+      Grinzzly
+    </a>
     <script src = './js/Bird-Brain.js'></script>
     <script src = './js/Game.js'></script>
   </body>

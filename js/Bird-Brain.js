@@ -2,8 +2,8 @@ const options = {
   /**
    * Logistic activation function.
    *
-   * @param a Input value.
-   * @return Number function output.
+   * @param a - Input value.
+   * @return Number - function output.
    */
   activation: function (a) {
     return (1 / (1 + Math.exp(-a)))
@@ -12,7 +12,7 @@ const options = {
   /**
    * Returns a random value between -1 and 1.
    *
-   * @return Number random function output.
+   * @return Number - random function output.
    */
   randomClamped: function () {
     return Math.random() * 2 - 1;
