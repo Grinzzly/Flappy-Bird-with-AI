@@ -16,8 +16,10 @@
 
 ## About
 Hack old faithful Flappy Bird with Neural Network and Genetic Algorithm
-  
-![demo](img/demo.png)
+ 
+<div align="center">
+  <img src="img/demo.png" alt="Demo">
+</div>
 
 ## Installation & Usage
 
