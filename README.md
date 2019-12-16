@@ -15,7 +15,9 @@
 </div>
 
 ## About
-Hack old faithful Flappy Bird with Neural Network and Genetic Algorithm
+Hack old faithful Flappy Bird with Neural Network and Genetic Algorithm.
+
+You may observe result [here](https://flappy-bird.simplexco.de).
  
 <div align="center">
   <img src="img/demo.png" alt="Demo">
