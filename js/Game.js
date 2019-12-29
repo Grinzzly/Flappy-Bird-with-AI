@@ -134,6 +134,9 @@ class Game {
     this.pipes = [];
     this.birds = [];
     this.score = 0;
+    this.maxScore = 0;
+    this.pipesPassed = 0;
+    this.maxPipesPassed = 0;
     this.canvas = document.querySelector("#flappy");
     this.ctx = this.canvas.getContext("2d");
     this.width = this.canvas.width;
@@ -145,12 +148,12 @@ class Game {
     this.generation = 0;
     this.backgroundSpeed = 0.5;
     this.backgroundx = 0;
-    this.maxScore = 0;
   }
 
   start() {
     this.interval = 0;
     this.score = 0;
+    this.pipesPassed = 0;
     this.pipes = [];
     this.birds = [];
 
@@ -225,11 +228,12 @@ class Game {
     this.interval++;
 
     if(this.interval === this.spawnInterval){
+      this.pipesPassed++;
+      this.maxPipesPassed = (this.pipesPassed > this.maxPipesPassed) ? this.pipesPassed : this.maxPipesPassed;
+
       this.interval = 0;
     }
 
-    //TODO: divide distance counter and score counter
-    // onto separated values
     this.score++;
     this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
 
@@ -303,8 +307,8 @@ class Game {
     this.ctx.fillStyle = 'white';
     this.ctx.font='24px Oswald, sans-serif';
 
-    this.ctx.fillText(`Score: ${this.score}`, 10, 65);
-    this.ctx.fillText(`Record: ${this.maxScore}`, 10, 90);
+    this.ctx.fillText(`Pipes: ${this.pipesPassed}`, 10, 65);
+    this.ctx.fillText(`Record: ${this.maxPipesPassed}`, 10, 90);
     this.ctx.fillText(`Generation: ${this.generation}`, 218, 65);
     this.ctx.fillText(`Alive: ${this.alives} / ${Brain.options.population}`, 218, 90);
 
