@@ -225,13 +225,13 @@ class Game {
     this.interval++;
 
     if(this.interval === this.spawnInterval){
-      this.score++;
-      this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
-
       this.interval = 0;
     }
 
-
+    //TODO: divide distance counter and score counter
+    // onto separated values
+    this.score++;
+    this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
 
     if(FPS === 0){
       setZeroTimeout(() => {
@@ -305,8 +305,8 @@ class Game {
 
     this.ctx.fillText(`Score: ${this.score}`, 10, 65);
     this.ctx.fillText(`Record: ${this.maxScore}`, 10, 90);
-    this.ctx.fillText(`Generation: ${this.generation}`, 242, 65);
-    this.ctx.fillText(`Alive: ${this.alives} / ${Brain.options.population}`, 242, 90);
+    this.ctx.fillText(`Generation: ${this.generation}`, 218, 65);
+    this.ctx.fillText(`Alive: ${this.alives} / ${Brain.options.population}`, 218, 90);
 
     requestAnimationFrame(() => {
       this.display();
