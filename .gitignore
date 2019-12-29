@@ -19,9 +19,9 @@
 #
 ################################################
 
+build
 config/local.js
 config/env/development.js
-build
 
 ################################################
 # Dependencies
@@ -36,10 +36,10 @@ build
 #
 ################################################
 
+dist
 node_modules
 bower_components
 coverage
-dist
 
 ################################################
 # Gulp / Waterline / Grunt
@@ -58,11 +58,11 @@ dist
 # related ecosystem.
 ################################################
 
-lib-cov
 *.seed
 *.log
 *.out
 *.pid
+lib-cov
 npm-debug.log
 
 ################################################
@@ -75,9 +75,9 @@ npm-debug.log
 *~
 *#
 .DS_STORE
+.idea
 .netbeans
 nbproject
-.idea
 .vscode
 *.iml
 .node_history
