@@ -42,8 +42,10 @@ const loadImages = (sources, callback) => {
 
   for(let i in sources){
     nb++;
+
     imgs[i] = new Image();
     imgs[i].src = sources[i];
+
     imgs[i].onload = () => {
       loaded++;
       if(loaded === nb){
@@ -94,7 +96,7 @@ class Bird {
         this.x + this.width < pipes[i].x ||
         this.y > pipes[i].y + pipes[i].height ||
         this.y + this.height < pipes[i].y
-      )){
+      )) {
         return true;
       }
     }
