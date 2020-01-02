@@ -191,6 +191,7 @@ class Game {
         ];
 
         const res = this.gen[i].compute(inputs);
+
         if(res > 0.5){
           this.birds[i].flap();
         }
@@ -200,6 +201,7 @@ class Game {
         if(this.birds[i].isDead(this.height, this.pipes)){
           this.birds[i].alive = false;
           this.alives--;
+
           Brain.networkScore(this.gen[i], this.score);
 
           if(this.isItEnd()){
@@ -307,8 +309,9 @@ class Game {
     }
 
     this.ctx.fillStyle = 'white';
-    this.ctx.font='24px Oswald, sans-serif';
+    this.ctx.font = '24px Oswald, sans-serif';
 
+    // Text on canvas section
     this.ctx.fillText(`Pipes: ${this.pipesPassed}`, 10, 65);
     this.ctx.fillText(`Record: ${this.maxPipesPassed}`, 10, 90);
     this.ctx.fillText(`Generation: ${this.generation}`, 218, 65);
